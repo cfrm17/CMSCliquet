@@ -1,6 +1,6 @@
 # CMS Cliquet
 
-A CMS cliquet option has two legs: One leg of this deal is based on (regular) floating rates. The other leg links to CMS swap rates. Due to the “set-in-arrear” feature in the structured leg, convexity and timing adjustments have to be considered. 
+A CMS cliquet option has two legs: One leg of this deal is based on (regular) floating rates. The other leg links to CMS swap rates. Due to the “set-in-arrear” feature in the structured leg, convexity and timing adjustments have to be considered. See https://finpricing.com/lib/EqCliquet.html
 
 Due to the embedded option and convexity adjustments in the structure leg, we need swap rate volatilities and forward rate volatilities. The former can be interpolated from the implied swaption volatility surface. The latter should be interpolated from the so-called implied forward volatility surface. 
 
@@ -16,10 +16,3 @@ Now let V2 be the value of this leg and df(2) be the discounting factor from the
 
 If we can calculate the expectation of the future CMS swap rate, then present value (7) can be obtained by using Black’s formula. Considering the convexity adjustment, we can approximate the expectation.
 
-References:
-
-https://finpricing.com/lib/EqCallable.html
-
-https://zenodo.org/record/6561892/files/cmsCliquet.pdf
-
-https://zenodo.org/record/6561892#.YpDwnqgpDq4
